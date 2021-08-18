@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Home3.Views.MainPage"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="100,*,100" VerticalOptions="FillAndExpand"
+              BackgroundColor="LightGray">
+            <Label Text="Ac condei on"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout Grid.Row="1" 
+                         HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+
+                <!--<sh:Shadows Shades="{sh:SingleShade Offset='10,10', 
+                    Color=Red, BlurRadius=10, Opacity=0.6}" >
+                    <Button Text="AC on"/>
+                    
+                </sh:Shadows>-->
+
+                <BoxView HeightRequest="100"/>
+
+                <sh:Shadows CornerRadius="100" HorizontalOptions="Center" >
+                    <sh:Shadows.Shades>
+                        <sh:ImmutableShades>
+                            <sh:Shade BlurRadius="10"
+                                        Opacity="1"
+                                        Offset="-10,-10"
+                                        Color="White" />
+                            <sh:Shade BlurRadius="10"
+                                        Opacity="0.5"
+                                        Offset="10,10"
+                                        Color="Gray" />
+                        </sh:ImmutableShades>
+                    </sh:Shadows.Shades>
+
+                    <Button Text="{StaticResource ma_ac_unit }" FontSize="100" 
+                            FontFamily="{StaticResource IconFont}"
+                            CornerRadius="150" 
+                            Clicked="ButtonToggle_Clicked"
+                            HeightRequest="150" WidthRequest="150"
+                            BackgroundColor="LightGray" TextColor="DeepSkyBlue" />
+                </sh:Shadows>
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,15,0,0"
+                             HorizontalOptions="Center">
+                    <Button Text="On" BackgroundColor="Transparent" 
+                            Clicked="ButtonOn_Clicked" />
+                    <Button Text="Off" BackgroundColor="Transparent"
+                            Clicked="ButtonOff_Clicked" />
+                </StackLayout>
+
+                <StackLayout>
+                    <sh:Shadows CornerRadius="60" HorizontalOptions="Center" >
+                        <sh:Shadows.Shades>
+                            <sh:ImmutableShades>
+                                <sh:Shade BlurRadius="5"
+                                        Opacity="1"
+                                        Offset="-5,-5"
+                                        Color="White" />
+                                <sh:Shade BlurRadius="5"
+                                        Opacity="0.5"
+                                        Offset="5,5"
+                                        Color="Gray" />
+                            </sh:ImmutableShades>
+                        </sh:Shadows.Shades>
+
+                        <Button Text="{StaticResource ma_computer }" FontSize="30" 
+                            FontFamily="{StaticResource IconFont}"
+                            CornerRadius="60" 
+                            Clicked="Button_PC_toggle"
+                            HeightRequest="60" WidthRequest="60"
+                            BackgroundColor="LightGray" TextColor="DeepSkyBlue" />
+                    </sh:Shadows>
+
+                </StackLayout>
+
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

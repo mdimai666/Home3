@@ -1,0 +1,101 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    >
+
+
+    <!--Global Styles-->
+    <Color x:Key="colorAccent">#22B14C</Color>
+    <Color x:Key="Primary">#004E89</Color>
+    <Color x:Key="Accent">#FF6B35</Color>
+
+
+    <Color x:Key="NavigationPrimary">
+        <!--#22B14C--> #F5F6F6
+    </Color>
+
+    <Color x:Key="NavigationPrimary_lighter">#22B14C</Color>
+
+    <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+        <Setter Property="BarTextColor" Value="Black" />
+
+    </Style>
+
+
+    <Style TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#332196F3" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+
+    <!--<Style TargetType="sharedtransitions:SharedTransitionNavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+        <Setter Property="BarTextColor" Value="Black" />
+
+    </Style>-->
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+
+    <Color x:Key="s_btn_primary_color">#f0b13e</Color>
+    <Color x:Key="s_btn_border_color">#fac70f</Color>
+
+    <Style TargetType="Button" Class="ButtonExpand">
+        <Setter Property="BackgroundColor" Value="{StaticResource s_btn_primary_color}"/>
+        <Setter Property="BorderColor" Value="{StaticResource s_btn_border_color}"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="MinimumHeightRequest" Value="0"/>
+        <Setter Property="Padding" Value="40,0"/>
+        <Setter Property="CornerRadius" Value="12"/>
+
+    </Style>
+
+    <!--Font icons-->
+    <OnPlatform x:TypeArguments="x:String" x:Key="IconFont">
+        <On Platform="Android"
+            Value="MaterialIcons-Regular.ttf#Material Icons" />
+        <On Platform="iOS"
+            Value="Material Icons" />
+        <On Platform="UWP"
+            Value="/Assets/MaterialIcons-Regular.ttf#Material Icons" />
+    </OnPlatform>
+
+
+    <x:String x:Key="test">Test</x:String>
+    <!--x-->
+
+    <Style TargetType="Button" x:Key="btnOutline1">
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="Margin" Value="0"/>
+        <!--<Setter Property="HeightRequest" Value="30"/>-->
+        <!--<Setter Property="WidthRequest" Value="40"/>-->
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="BorderColor" Value="{StaticResource colorAccent}"/>
+        <Setter Property="CornerRadius" Value="4"/>
+
+    </Style>
+
+
+</ResourceDictionary>
