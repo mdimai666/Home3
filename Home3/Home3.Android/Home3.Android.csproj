@@ -43,6 +43,13 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\projects1\Home3\Home3\Home3.Android\home3home3.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>home3home3</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>home3</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>home3home3</AndroidSigningKeyPass>
+    <AndroidApkSignerAdditionalArguments>
+    </AndroidApkSignerAdditionalArguments>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
