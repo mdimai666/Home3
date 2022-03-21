@@ -68,7 +68,8 @@ namespace Home3.Views
 
         async void Button_PC_toggle(object sender, EventArgs e)
         {
-            string result = await server.GET("/api/pc?code=toggle");
+            //string result = await server.GET("/api/pc?code=toggle");
+            string result = await server.GET("http://192.168.3.13/cmd?code=start");
 
         }
 
