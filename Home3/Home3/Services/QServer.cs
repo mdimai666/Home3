@@ -11,7 +11,7 @@ namespace Home3.Services
     public class QServer
     {
 
-        protected HttpClient m_client;
+        public HttpClient m_client;
 
         public Uri m_backendUrl;
 

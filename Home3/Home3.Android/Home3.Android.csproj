@@ -50,6 +50,10 @@
     <AndroidSigningKeyPass>home3home3</AndroidSigningKeyPass>
     <AndroidApkSignerAdditionalArguments>
     </AndroidApkSignerAdditionalArguments>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

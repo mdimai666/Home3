@@ -18,6 +18,7 @@ namespace Home3
 
             HttpClient httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri("http://192.168.3.6");
+            httpClient.DefaultRequestHeaders.Add("ClientType", "app.home3");
             QServer server = new QServer(httpClient);
             server.EnsureSuccessStatusCode = false;
 
