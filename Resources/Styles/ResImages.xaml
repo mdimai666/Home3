@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--logo-->
+    <x:String x:Key="logo1">logo1.svg</x:String>
+
+    <!--menu icons-->
+    <x:String x:Key="icon_settings">tab_settings.svg</x:String>
+    <x:String x:Key="icon_user">icon_user.svg</x:String>
+
+    <!--tabs icons-->
+    
+    <!--bg-->
+
+
+</ResourceDictionary>

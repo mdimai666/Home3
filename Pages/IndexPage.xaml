@@ -1,0 +1,154 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.IndexPage"
+             Title="Mann"
+             Shell.NavBarIsVisible="False"
+             x:Name="Root"
+             xmlns:st="clr-namespace:MauiApp1.Resources.Styles"
+             xmlns:models="clr-namespace:MauiApp1.Models"
+             xmlns:local="clr-namespace:MauiApp1.Pages"
+             xmlns:com="clr-namespace:MauiApp1.Components"
+             
+             BackgroundColor="{DynamicResource Secondary}">
+
+    <ContentPage.BindingContext>
+        <local:IndexPageVM x:Name="vm" />
+    </ContentPage.BindingContext>
+
+    <!--https://github.com/enisn/Xamarin.Forms.InputKit check it-->
+    <!--https://github.com/enisn/Plugin.BottomSheet-->
+    <!--https://github.com/galadril/Xam.Plugin.SimpleBottomDrawer-->
+    <!--https://github.com/microcharts-dotnet/Microcharts-->
+    <!--https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions-->
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array Type="{x:Type models:TestClass}" x:Key="list1">
+                <models:TestClass x1="key1" x2="value1" x3="1" />
+                <models:TestClass x1="key2" x2="value2" x3="2" />
+                <models:TestClass x1="key3" x2="value3" x3="3" />
+                <models:TestClass x1="key4" x2="value4" x3="4" />
+                <models:TestClass x1="key4" x2="value4" x3="4" />
+            </x:Array>
+
+            <Style TargetType="Button" Class="shadowed">
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dima" IconImageSource="icon_task.svg" Order="Primary"  />
+    </ContentPage.ToolbarItems>-->
+    <Grid RowDefinitions="60,*,80" >
+
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button" x:Key="btn1">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <FlexLayout Grid.Row="0" JustifyContent="SpaceBetween" AlignContent="Stretch" >
+            <FlexLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button" x:Key="btn_2_2">
+                        <Setter Property="Margin" Value="5,5"/>
+                    </Style>
+                </ResourceDictionary>
+            </FlexLayout.Resources>
+            <Button Text="1" Style="{StaticResource btn_2_2}" FlexLayout.Grow="1"
+                    Clicked="ButtonCommand_Clicked" BindingContext="btn1"/>
+            <Button Text="2" Style="{StaticResource btn_2_2}" FlexLayout.Grow="1"
+                    Clicked="ButtonCommand_Clicked" BindingContext="btn2"/>
+            <Button Text="3" Style="{StaticResource btn_2_2}" FlexLayout.Grow="1"
+                    Clicked="ButtonCommand_Clicked" BindingContext="btn3"/>
+            <Button Text="4" Style="{StaticResource btn_2_2}" FlexLayout.Grow="1"
+                    Clicked="ButtonCommand_Clicked" BindingContext="btn4"/>
+
+        </FlexLayout>
+
+        <StackLayout Grid.Row="1" VerticalOptions="Center">
+            <Grid ColumnDefinitions="1*,2*,1*"  Margin="50,0" >
+
+                <Button Grid.Column="1" Text="{StaticResource ma_ac_unit}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        CornerRadius="100"
+                        HeightRequest="120"
+                        WidthRequest="120"
+                        Clicked="ButtonToggle_Clicked"
+                        FontSize="60"
+                        TextColor="{StaticResource Accent}"
+                        FontFamily="{StaticResource MaterialIcons}">
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="gray"
+                            Offset="0,0"
+                            Radius="80"
+                            Opacity="0.8" />
+                    </Button.Shadow>
+                </Button>
+
+                <StackLayout Grid.Column="2" Spacing="10">
+                    <Button Text="{StaticResource ma_computer}"
+                            Clicked="Button_PC_toggle"
+                            FontSize="30"
+                            CornerRadius="100"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            TextColor="{StaticResource Accent}"
+                            FontFamily="{StaticResource MaterialIcons}">
+                        <Button.Shadow>
+                            <Shadow
+                            Brush="gray"
+                            Offset="0,0"
+                            Radius="80"
+                            Opacity="0.8" />
+                        </Button.Shadow>
+                    </Button>
+                    <Button Text="{StaticResource ma_audiotrack}"
+                            Clicked="ButtonCommand_Clicked"
+                            BindingContext="audio1"
+                            FontSize="30"
+                            CornerRadius="100"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            TextColor="{StaticResource Accent}"
+                            FontFamily="{StaticResource MaterialIcons}">
+                        <Button.Shadow>
+                            <Shadow
+                            Brush="gray"
+                            Offset="0,0"
+                            Radius="80"
+                            Opacity="0.8" />
+                        </Button.Shadow>
+                    </Button>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+
+        <FlexLayout Grid.Row="2" BackgroundColor="Transparent" JustifyContent="Center" >
+            <FlexLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button" x:Key="btn1_1">
+                        <Setter Property="Margin" Value="5,0"/>
+                        <Setter Property="WidthRequest" Value="50"/>
+                        <Setter Property="CornerRadius" Value="50"/>
+                        <Setter Property="Opacity" Value="0.5"/>
+                    </Style>
+                </ResourceDictionary>
+            </FlexLayout.Resources>
+            <Button Text="" Style="{StaticResource btn1_1}" 
+                    Clicked="ButtonCommand_Clicked" BindingContext="fbtn1"/>
+            <Button Text="" Style="{StaticResource btn1_1}" 
+                    Clicked="ButtonCommand_Clicked" BindingContext="fbtn2"/>
+            <Button Text="" Style="{StaticResource btn1_1}" 
+                    Clicked="ButtonCommand_Clicked" BindingContext="fbtn3"/>
+        </FlexLayout>
+
+
+
+    </Grid>
+</ContentPage>
